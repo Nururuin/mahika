@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MAHIKA</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1e1e1e;
+      color: #fff;
+      text-align: center;
+      padding: 30px 15px;
+      font-family: 'Cinzel Decorative', serif;
+      overflow-x: hidden;
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #6600ff;
+    }
+
+    .mahika-title {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 0.3rem;
+    }
+
+    .mahika-title span {
+      font-family: 'Manufacturing Consent', serif;
+      font-size: 4rem;
+      letter-spacing: 2px;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      background: linear-gradient(to right,
+        #000000 0%,
+        #340957 30%,
+        #850d2b 38%,
+        #1022df 65%,
+        #070066 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      text-shadow: 0 0 5px #6600ff44;
+    }
+
+    /* Staggered reveal */
+    .mahika-title span:nth-child(1) { animation-delay: 0.3s; }
+    .mahika-title span:nth-child(2) { animation-delay: 0.5s; }
+    .mahika-title span:nth-child(3) { animation-delay: 0.7s; }
+    .mahika-title span:nth-child(4) { animation-delay: 0.9s; }
+    .mahika-title span:nth-child(5) { animation-delay: 1.1s; }
+    .mahika-title span:nth-child(6) { animation-delay: 1.3s; }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); filter: blur(4px); }
+      100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+
+    .baybayin {
+      font-size: 1.2rem;
+      color: #999;
+      letter-spacing: 4px;
+      margin-top: 0.2rem;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 1.6s;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 2s;
+      opacity: 0;
+    }
+
+    .enter-btn {
+      background: transparent;
+      color: #fff;
+      padding: 10px 25px;
+      border: 2px solid #fff;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s ease;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 2.4s;
+      opacity: 0;
+    }
+
+    .enter-btn:hover {
+      background: #ff0055;
+      border-color: #ff0055;
+      box-shadow: 0 0 12px #ff0055;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner Image -->
+  <img src="banner.png" alt="Mahika Banner" class="banner">
+
+  <!-- Letter-by-letter Gradient Logo -->
+  <div class="mahika-title">
+    <span>M</span>
+    <span>a</span>
+    <span>h</span>
+    <span>i</span>
+    <span>k</span>
+    <span>a</span>
+  </div>
+
+  <!-- Baybayin -->
+  <p class="baybayin">ᜋᜑᜒᜃ</p>
+
+  <!-- Tagline -->
+  <p class="tagline">The coven awakens. A new era of idols rises from the shadows.</p>
+
+  <!-- Button -->
+  <button class="enter-btn" onclick="alert('More pages coming soon...')">Enter</button>
+
+</body>
+</html>
